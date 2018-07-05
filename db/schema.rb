@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_27_155417) do
+ActiveRecord::Schema.define(version: 2018_07_05_172124) do
+
+  create_table "shops", force: :cascade do |t|
+    t.string "fullname"
+    t.string "email"
+    t.text "address"
+    t.string "city"
+    t.string "pincode"
+    t.string "mobile"
+    t.string "companyname"
+    t.text "description"
+    t.string "gstin"
+    t.string "cityofreg"
+    t.string "cityofoper"
+    t.string "weburl"
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

@@ -1,13 +1,14 @@
 
-<div class="jumbotron center">
+<div class="jumbotron">
 	<h1>Welcome to my Sample Streetfull</h1>
 	<% if user_signed_in? %>
   <%= link_to destroy_user_session_path, method: :delete do %>
   <span class="glyphicon glyphicon-log-out"></span> Log Out
+	<% end %>
 	<% else %>
 		<p>
 			<%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
 			<%= link_to "Sign up", new_user_registration_path, class: "btn btn-default" %>
 		</p>
-	<% end %>
+  <% end %>
 </div>
