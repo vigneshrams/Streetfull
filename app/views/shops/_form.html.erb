@@ -1,0 +1,69 @@
+<%= form_for @shop, html: { multipart: true } do |f| %>
+  <% if @shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shop.errors.count, "error") %> prohibited this pin from being saved:</h2>
+
+      <ul>
+      <% @shop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :fullname %><br>
+    <%= f.text_field :fullname, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %><br>
+    <%= f.text_field :address, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :city %><br>
+    <%= f.text_field :city, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :pincode %><br>
+    <%= f.text_field :pincode, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mobile, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :companyname %><br>
+    <%= f.text_field :companyname, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_field :description, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :gstin %><br>
+    <%= f.text_field :gstin, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :cityofreg %><br>
+    <%= f.text_field :cityofreg, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :cityofoper %><br>
+    <%= f.text_field :cityofoper, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :weburl %><br>
+    <%= f.text_field :weburl, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.label :category %><br>
+    <%= f.text_field :category, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary"%>
+  </div>
+<% end %>

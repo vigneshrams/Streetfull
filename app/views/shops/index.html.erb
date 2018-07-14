@@ -1,1 +1,24 @@
 <%= render 'pages/home' %>
+
+<div id="shops" class="transitions-enabled">
+  <% @shops.each do |shop| %>
+    <div class="box panel panel-default">
+
+      <div class="panel-body">
+        <%= shop.companyname %> </br>
+
+        <div class="actions">
+          <%= link_to edit_shop_path(shop) do %>
+              <span class="glyphicon glyphicon-edit"></span>
+              Edit
+            <% end %> |
+            <%= link_to shop, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              Delete
+
+        </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
